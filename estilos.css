@@ -1,0 +1,191 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400;1,600&display=swap" rel="stylesheet">
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: transparent;
+    padding: var(--padding-container);
+}
+
+:root{  /*custom propertis*/
+    --padding-container: 100px 0;
+    --color-title: #3a06c7;
+
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid; /* para crear mas filas*/
+    grid-template-rows: 100px 1fr;
+    color: #fff; /* le cambió el color al texto APRENDE CSS3..*/
+
+}
+.hero::before{/* es para la imagen "logo" */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   background-image: linear-gradient(180deg, #dfeff107 0%,#dfeff138   100%), url('../img/cdmx.jpg');
+    background-size: cover; /*para que se adapte a la página*/
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1; /*con esto la imágen pasó a estar detrás del texto*/
+
+    
+}
+
+.nav{
+    --padding-container:0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+/*con esto el texto no se va a quedar detras de la imagen */
+
+.nav_title{
+    font-weight: 300;
+}
+.nav_items{
+    list-style: none;/* Le quitó el estilo de hypervinculo a los elementos*/
+}
+
+.nav_link{ /*aquí se creo el menú de navegación*/
+    margin-left: auto;
+    padding: 0%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.nav_menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+
+}
+
+.nav_img{
+display: block;
+width: 30px;
+}
+
+.nav_close{
+    display: var(--show,none)
+}
+
+.hero_container{ /* desde aqui vamos a empezar a diseñar el estylo del texto*/
+    max-width: 800px;
+    --padding-container:0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: lem;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero_title{
+    font-size: 3rem;
+}
+
+.hero_paragraph{
+    margin-bottom: 20px;
+}
+
+.cta{ /*primer boton*/
+    display: inline-block;
+    background-color: #3a06c7;
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 32px;
+}
+
+/*seccion about "¿Qué aprenderas en este curso?*/
+
+.about{
+    text-align: center;
+}
+.subtitle{
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about_paragraph{
+    line-height: 1.7;
+
+}
+
+.about_main{ /* para que los iconos se muestren en esa posición*/
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow:hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+.about_icons{
+    display: grid;
+    gap: 1em; /*espaciado entre cada elemento*/
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin:0 auto;
+    
+}
+
+.about_icon{
+    width: 40px;
+
+}
+
+/* Knowledge , magic pattern */
+.knowledge{
+     
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: repeat;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg width=%222000%22 height=%221000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cstyle%3E.shadow_right{-webkit-filter:drop-shadow(-5px -5px 15px %231d03ff);filter:drop-shadow(-5px -5px 15px %231d03ff)}.shadow_left{-webkit-filter:drop-shadow(5px 5px 15px %231d03ff);filter:drop-shadow(5px 5px 15px %231d03ff)}%3C%2Fstyle%3E%3Cdefs%3E%3ClinearGradient id=%22gradient__0%22 x1=%220%22 y1=%220%22 x2=%220%22 y2=%221%22%3E%3Cstop stop-color=%22%231d03ff%22 offset=%220%25%22%2F%3E%3Cstop stop-color=%22%237f86f3%22 offset=%2216.7%25%22%2F%3E%3Cstop stop-color=%22%23efedff%22 offset=%2233.3%25%22%2F%3E%3Cstop stop-color=%22%23fff%22 offset=%2250%25%22%2F%3E%3Cstop stop-color=%22%23efedff%22 offset=%2266.7%25%22%2F%3E%3Cstop stop-color=%22%237f86f3%22 offset=%2283.3%25%22%2F%3E%3Cstop stop-color=%22%231d03ff%22 offset=%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cfilter id=%22grain%22 x=%22-1000%22 y=%22-500%22 width=%224000%22 height=%222000%22 filterUnits=%22userSpaceOnUse%22%3E&gt;%3CfeFlood flood-color=%22%23fff%22 result=%22neutral-gray%22%2F%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22%2F%3E%3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22%2F%3E%3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E%3CfeFuncA type=%22table%22 tableValues=%220 0 0.4 0%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg filter=%22url(%23grain)%22%3E%3Cpath fill=%22%231d03ff%22 d=%22M0 0h2000v1000H0z%22%2F%3E%3Cpath id=%22rect__4%22 fill=%22url(%23gradient__0)%22 d=%22M888.889 222.222h222.222v555.556H888.889z%22%2F%3E%3Cpath class=%22shadow_left%22 id=%22rect__5%22 fill=%22url(%23gradient__0)%22 d=%22M1111.111 166.667h222.222v666.667h-222.222z%22%2F%3E%3Cpath class=%22shadow_left%22 id=%22rect__6%22 fill=%22url(%23gradient__0)%22 d=%22M1333.333 111.111h222.222v777.778h-222.222z%22%2F%3E%3Cpath class=%22shadow_left%22 id=%22rect__7%22 fill=%22url(%23gradient__0)%22 d=%22M1555.556 55.556h222.222v888.889h-222.222z%22%2F%3E%3Cpath class=%22shadow_left%22 id=%22rect__8%22 fill=%22url(%23gradient__0)%22 d=%22M1777.778 0H2000v1000h-222.222z%22%2F%3E%3Cpath class=%22shadow_right%22 id=%22rect__3%22 fill=%22url(%23gradient__0)%22 d=%22M666.667 166.667h222.222v666.667H666.667z%22%2F%3E%3Cpath class=%22shadow_right%22 id=%22rect__2%22 fill=%22url(%23gradient__0)%22 d=%22M444.444 111.111h222.222v777.778H444.444z%22%2F%3E%3Cpath class=%22shadow_right%22 id=%22rect__1%22 fill=%22url(%23gradient__0)%22 d=%22M222.222 55.556h222.222v888.889H222.222z%22%2F%3E%3Cpath class=%22shadow_right%22 id=%22rect__0%22 fill=%22url(%23gradient__0)%22 d=%22M0 0h222.222v1000H0z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      
+      
+}
+
+.knowledge_container {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.knowledge_picture{
+    max-width: 500px;
+}
+
+.knowledge_paragraph{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+.knowledge_img{
+    width: 100%;
+    display: block;
+}
